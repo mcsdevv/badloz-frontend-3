@@ -1,0 +1,85 @@
+.background {
+  &.index {
+    .object {
+      position: absolute;
+      left: 0;
+      overflow: hidden;
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      background-repeat: repeat-x;
+      background-position: 0 0;
+      &.one {
+        z-index: 5;
+      }
+      &.two {
+        z-index: 4;
+      }
+      &.three {
+        z-index: 3;
+      }
+      &.four {
+        z-index: 2;
+      }
+      &.five {
+        z-index: 1;
+      }
+      &.body {
+        left: 60%;
+        height: 100%;
+        width: 40%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        svg {
+          width: 100%;
+          fill: $color--brand-type1--lv0;
+        }
+      }
+      &.cloud {
+        &.one {
+          bottom: 0;
+          height: 239px;
+          background-color: $color--brand-type1--lv1;
+          -webkit-mask-image: url("~../public/svg/illustrations/clouds/Cloud1.svg");
+          mask-image: url("~../public/svg/illustrations/clouds/Cloud1.svg");
+          animation: shift 100s linear infinite;
+          opacity: 1;
+        }
+        &.three {
+          bottom: $spacing--lv9;
+          height: 551px;
+          background-color: $color--brand-type1--lv4;
+          -webkit-mask-image: url("~../public/svg/illustrations/clouds/Cloud2.svg");
+          mask-image: url("~../public/svg/illustrations/clouds/Cloud2.svg");
+          animation: shift 110s linear infinite;
+        }
+        &.four {
+          top: $spacing--lv10;
+          height: 366px;
+          background-color: $color--brand-type1--lv1;
+          -webkit-mask-image: url("~../public/svg/illustrations/clouds/Cloud3.svg");
+          mask-image: url("~../public/svg/illustrations/clouds/Cloud3.svg");
+          animation: shift 120s linear infinite;
+        }
+        &.five {
+          top: $spacing--lv9;
+          height: 154px;
+          background-color: $color--brand-type1--lv2;
+          -webkit-mask-image: url("~../public/svg/illustrations/clouds/Cloud4.svg");
+          mask-image: url("~../public/svg/illustrations/clouds/Cloud4.svg");
+          animation: shift 130s linear infinite;
+        }
+      }
+    }
+  }
+}
+
+@keyframes shift {
+  0% {
+    mask-position: 0px;
+  }
+  100% {
+    mask-position: 2880px;
+  }
+}

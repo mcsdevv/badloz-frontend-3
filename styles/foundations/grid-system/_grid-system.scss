@@ -1,0 +1,273 @@
+.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  &.height--full-plus {
+    min-height: 100%;
+  }
+  .row {
+    z-index: 2;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $spacing--lv7;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    &.padding--false {
+      padding: 0;
+    }
+    &.flex-direction--column-reverse,
+    &.flex-direction--column-reverse--row--mobile {
+      flex-direction: column-reverse;
+    }
+    .grid-list {
+      width: 100%;
+      display: grid;
+      &.show--1-2 {
+        grid-auto-flow: row dense;
+        grid-row-gap: $spacing--lv6;
+      }
+    }
+    .scroll--horizontal {
+      width: 100%;
+      padding: 0 $spacing--lv7;
+      white-space: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .item {
+        margin-right: $spacing--lv6;
+        display: inline-flex;
+        &:last-child {
+          margin-right: $spacing--lv0;
+        }
+      }
+      &.show--2-3 {
+        .item {
+          width: 88%;
+        }
+      }
+      &.show--3-4-lv12 {
+        .item {
+          width: 44%;
+        }
+      }
+    }
+    .col {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      &.size1of1,
+      &.size1of2,
+      &.size1of3,
+      &.size1of4,
+      &.size2of2,
+      &.size2of3,
+      &.size3of3,
+      &.size2of4,
+      &.size3of4,
+      &.size4of4,
+      &.size2of8,
+      &.size3of8,
+      &.size4of8,
+      &.size5of8,
+      &.size6of8,
+      &.size7of8,
+      &.size8of8 {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+      &.size1of8 {
+        -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+        max-width: 50%;
+      }
+      &.size1of2.nochange {
+        -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+        max-width: 50%;
+      }
+      &.justify-content--center {
+        justify-content: center;
+      }
+    }
+  }
+  &.height--full-plus > .row {
+    -webkit-box-flex: 1 !important;
+    -ms-flex: 1 !important;
+    flex: 1 !important;
+  }
+}
+@media screen and (min-width: 576px) {
+  .container {
+    .row {
+      .col {
+        &.size1of4.nochange,
+        &.size2of8.nochange {
+          -ms-flex-preferred-size: 25%;
+          flex-basis: 25%;
+          max-width: 25%;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    .row {
+      .grid-list {
+        &.show--1-2 {
+          grid-auto-flow: dense;
+          grid-template-columns: 1fr 1fr;
+          grid-column-gap: $spacing--lv7;
+        }
+      }
+      .scroll--horizontal {
+        .item {
+          margin-right: $spacing--lv7;
+        }
+        &.show--2-3 {
+          .item {
+            width: 44%;
+          }
+        }
+        &.show--3-4-lv12 {
+          .item {
+            width: 25%;
+          }
+        }
+      }
+      .col {
+        &.size1of2,
+        &.size1of4,
+        &.size1of8,
+        &.size2of8 {
+          -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+          max-width: 50%;
+        }
+        &.size1of3.nochange {
+          -ms-flex-preferred-size: 33.33%;
+          flex-basis: 33.33%;
+          max-width: 33.33%;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    &.app {
+      width: calc(100% - 89px);
+      margin-left: 89px;
+      .row {
+        width: 100%;
+        padding: 0 $spacing--lv8;
+        &.padding--false {
+          padding: 0;
+        }
+        .scroll--horizontal {
+          padding: 0 $spacing--lv8;
+          &.show--3-4-lv12 {
+            .item {
+              width: $spacing--lv12;
+            }
+          }
+        }
+      }
+    }
+    .row {
+      width: 83.5%;
+      padding: 0;
+      &.width--full {
+        width: 100%;
+      }
+      &.flex-direction--column-reverse--row--mobile {
+        flex-direction: row;
+      }
+      .col {
+        &.size1of8 {
+          -ms-flex-preferred-size: 12.5%;
+          flex-basis: 12.5%;
+          max-width: 12.5%;
+        }
+        &.size1of4,
+        &.size2of8 {
+          -ms-flex-preferred-size: 25%;
+          flex-basis: 25%;
+          max-width: 25%;
+        }
+        &.size1of3 {
+          -ms-flex-preferred-size: 33.33%;
+          flex-basis: 33.33%;
+          max-width: 33.33%;
+        }
+        &.size3of8 {
+          -ms-flex-preferred-size: 37.5%;
+          flex-basis: 37.5%;
+          max-width: 37.5%;
+        }
+        &.size2of4,
+        &.size4of8 {
+          -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+          max-width: 50%;
+        }
+        &.size5of8 {
+          -ms-flex-preferred-size: 62.5%;
+          flex-basis: 62.5%;
+          max-width: 62.5%;
+        }
+        &.size2of3 {
+          -ms-flex-preferred-size: 66.67%;
+          flex-basis: 66.67%;
+          max-width: 66.67%;
+        }
+        &.size3of4,
+        &.size6of8 {
+          -ms-flex-preferred-size: 75%;
+          flex-basis: 75%;
+          max-width: 75%;
+        }
+        &.size7of8 {
+          -ms-flex-preferred-size: 87.5%;
+          flex-basis: 87.5%;
+          max-width: 87.5%;
+        }
+      }
+    }
+  }
+}

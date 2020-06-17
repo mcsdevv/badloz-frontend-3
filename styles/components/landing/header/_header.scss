@@ -1,0 +1,158 @@
+%logo {
+  height: 1em * 3.45;
+  width: 3.8603515625em * 3.45;
+}
+@media screen and (min-width: 576px) {
+  %logo {
+    height: 1em * 3;
+    width: 3.8603515625em * 3;
+  }
+}
+@media screen and (min-width: 992px) {
+  %logo {
+    height: 1em * 2.6;
+    width: 3.8603515625em * 2.6;
+  }
+}
+
+header {
+  z-index: 600;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  height: $spacing--lv9;
+  width: 100%;
+  padding: 0 $spacing--lv6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  .logo {
+    @extend %logo;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    svg {
+      height: 100%;
+      width: 100%;
+      stroke-width: 0;
+      stroke: currentColor;
+      fill: currentColor;
+      .icon {
+        fill: $color--brand-type1--lv0;
+      }
+    }
+  }
+  .menu {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    nav {
+      height: $spacing--lv9;
+      display: -ms-grid;
+      display: grid;
+      grid-auto-flow: column dense;
+      grid-column-gap: $spacing--lv7;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      .item {
+        z-index: 3;
+        position: relative;
+        height: $spacing--lv9;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+
+        .hide-mobile {
+          display: none;
+        }
+        .hide-phone {
+          display: none;
+        }
+      }
+      .button {
+        height: auto;
+      }
+      .dropdown {
+        .forgive {
+          z-index: 1;
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: $spacing--lv9;
+          width: 50%;
+          display: none;
+        }
+        .content {
+          z-index: 1;
+          position: absolute;
+          left: 0;
+          top: $spacing--lv9;
+          width: 100%;
+          display: none !important;
+          background: pink;
+        }
+        &:hover .item {
+          background: yellow;
+        }
+        &:hover .forgive {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+        }
+        &:hover .content {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  header {
+    .menu {
+      nav {
+        .item {
+          .show-phone {
+            display: none;
+          }
+          .hide-phone {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  header {
+    .menu {
+      nav {
+        .item {
+          .hide-desktop {
+            display: none;
+          }
+          .hide-mobile {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}

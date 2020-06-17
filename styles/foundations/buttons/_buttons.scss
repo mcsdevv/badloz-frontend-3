@@ -1,0 +1,14 @@
+.button {
+  &.medium {
+    padding: $spacing--lv5 $spacing--lv7;
+  }
+  &.large {
+    padding: $spacing--lv6 $spacing--lv8;
+  }
+  &.rounded-corners {
+    border-radius: $spacing--lv6;
+  }
+  &.pill {
+    border-radius: $spacing--lv14;
+  }
+}

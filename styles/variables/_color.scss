@@ -1,0 +1,50 @@
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+$color--Black: #000000;
+$color--White: #ffffff;
+$color--AppleGray: #ebebeb;
+$color--Silver: #bec2cb;
+$color--Gold: #d7be69;
+$color--RoseGold: #d1a2a9;
+$color--AntiqueWhite: #faebd7;
+$color--BlanchedAlmond: #ffebcd;
+$color--FloralWhite: #fffaf0;
+$color--ClassicBlue: #0f4c81;
+$color--LivingCoral: #fa7268;
+$color--Cavendish: #ffe01b;
+$color--VividNavy: #2947f2;
+$color--Kale: #007C89;
+$color--BarbiePink: #e0218a;
+$color--CrimsonSonata: #96000F;
+
+
+$color--brand-type1--lv0: $color--CrimsonSonata;
+$color--brand-type1--lv1: tint($color--brand-type1--lv0, 90%);
+$color--brand-type1--lv2: tint($color--brand-type1--lv0, 80%);
+$color--brand-type1--lv3: tint($color--brand-type1--lv0, 70%);
+$color--brand-type1--lv4: tint($color--brand-type1--lv0, 60%);
+$color--brand-type1--lv5: tint($color--brand-type1--lv0, 50%);
+$color--brand-type1--lv6: tint($color--brand-type1--lv0, 40%);
+$color--brand-type1--lv7: tint($color--brand-type1--lv0, 30%);
+$color--brand-type1--lv8: tint($color--brand-type1--lv0, 20%);
+$color--brand-type1--lv9: tint($color--brand-type1--lv0, 10%);
+$color--brand-type1--lv10: shade($color--brand-type1--lv0, 10%);
+$color--brand-type1--lv11: shade($color--brand-type1--lv0, 20%);
+$color--brand-type1--lv12: shade($color--brand-type1--lv0, 30%);
+$color--brand-type1--lv13: shade($color--brand-type1--lv0, 40%);
+$color--brand-type1--lv14: shade($color--brand-type1--lv0, 50%);
+$color--brand-type1--lv15: shade($color--brand-type1--lv0, 60%);
+$color--brand-type1--lv16: shade($color--brand-type1--lv0, 70%);
+$color--brand-type1--lv17: shade($color--brand-type1--lv0, 80%);
+$color--brand-type1--lv18: shade($color--brand-type1--lv0, 90%);
+
+$color--LivingCoral--lv1: tint($color--LivingCoral, 90%);
+
+$color--Cavendish--lv1: tint($color--Cavendish, 90%);
+
+$color--VividNavy--lv1: tint($color--VividNavy, 90%);

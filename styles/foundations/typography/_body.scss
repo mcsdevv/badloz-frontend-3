@@ -1,0 +1,40 @@
+body {
+  @extend %font-base-regular;
+}
+p {
+  @extend %font-base-regular;
+  @include font-size($font-size--lv13);
+  line-height: $golden-ratio;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  &:first-child {
+    margin-block-start: 0px;
+  }
+  &:last-child {
+    margin-block-end: 0px;
+  }
+  &.hero--lv1 {
+    @extend %font-base-medium;
+    @include font-size($font-size--lv10);
+  }
+  &.hero--lv2 {
+    @extend %font-base-medium;
+    @include font-size($font-size--lv11);
+  }
+  &.hero--lv3 {
+    @extend %font-base-medium;
+    @include font-size($font-size--lv12);
+  }
+  &.hero--lv4 {
+    @extend %font-base-medium;
+    @include font-size($font-size--lv13);
+  }
+}
+li {
+  line-height: $golden-ratio;
+}
+a {
+  @extend %font-base-semibold;
+  @include font-size($font-size--lv14);
+  color: inherit;
+}

@@ -1,0 +1,90 @@
+@mixin font($font-family, $font-file) {
+  @font-face {
+    font-family: $font-family;
+    src: url($font-file + ".eot");
+    src: url($font-file + ".eot?#iefix") format("embedded-opentype"),
+      url($font-file + ".woff2") format("woff2"),
+      url($font-file + ".woff") format("woff"),
+      url($font-file + ".ttf") format("truetype"),
+      url($font-file + ".svg#aller") format("svg");
+  }
+}
+
+@include font("OpenSansRegular", "/fonts/OpenSans/OpenSansRegular");
+@include font("OpenSansMedium", "/fonts/OpenSans/OpenSansSemiBold");
+@include font("OpenSansSemiBold", "/fonts/OpenSans/OpenSansSemiBold");
+@include font("OpenSansBold", "/fonts/OpenSans/OpenSansBold");
+@include font("GilbertBold", "/fonts/GilbertBold/GilbertBold");
+
+$golden-ratio: 1.61803398875;
+$font-size--lv1: 80px !important;
+$font-size--lv2: 72px !important;
+$font-size--lv3: 64px !important;
+$font-size--lv4: 56px !important;
+$font-size--lv5: 48px !important;
+$font-size--lv6: 44px !important;
+$font-size--lv7: 40px !important;
+$font-size--lv8: 36px !important;
+$font-size--lv9: 32px !important;
+$font-size--lv10: 28px !important;
+$font-size--lv11: 24px !important;
+$font-size--lv12: 20px !important;
+$font-size--lv13: 18px !important;
+$font-size--lv14: 16px !important;
+$font-size--lv15: 14px !important;
+$font-size--lv16: 12px !important;
+$font-size--lv17: 10px !important;
+
+$font-family--brand-bold: GilbertBold;
+$font-family--brand-semibold: GilbertBold;
+$font-family--brand-medium: GilbertBold;
+$font-family--brand-regular: GilbertBold;
+
+$font-family--base-bold: OpenSansBold;
+$font-family--base-semibold: OpenSansSemiBold;
+$font-family--base-medium: OpenSansMedium;
+$font-family--base-regular: OpenSansRegular;
+
+$font-family--reset-sans-serif: -apple-system, system-ui, BlinkMacSystemFont,
+  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+%font-brand-bold {
+  font-family: $font-family--brand-bold, $font-family--reset-sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+%font-brand-semibold {
+  font-family: $font-family--brand-semibold, $font-family--reset-sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+%font-brand-medium {
+  font-family: $font-family--brand-medium, $font-family--reset-sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+%font-brand-regular {
+  font-family: $font-family--brand-regular, $font-family--reset-sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+%font-base-bold {
+  font-family: $font-family--base-bold, $font-family--reset-sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+%font-base-semibold {
+  font-family: $font-family--base-semibold, $font-family--reset-sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+%font-base-medium {
+  font-family: $font-family--base-medium, $font-family--reset-sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+%font-base-regular {
+  font-family: $font-family--base-regular, $font-family--reset-sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}

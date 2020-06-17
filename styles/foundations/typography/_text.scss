@@ -1,0 +1,19 @@
+.text {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: left;
+}
+.text-align--center,
+.text-align--center--mobile {
+  text-align: center;
+}
+@media screen and (min-width: 576px) {
+}
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 992px) {
+  .text-align--center--mobile {
+    text-align: left;
+  }
+}

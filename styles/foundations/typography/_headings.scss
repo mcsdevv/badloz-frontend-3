@@ -1,0 +1,57 @@
+h1,
+h2,
+h3,
+h4 {
+  @extend %font-brand-semibold;
+}
+h1 {
+  @include font-size($font-size--lv6);
+}
+h2 {
+  @include font-size($font-size--lv8);
+}
+h3 {
+  @include font-size($font-size--lv10);
+}
+h4 {
+  @include font-size($font-size--lv11);
+}
+.heading {
+  &.hero--lv1 {
+    @include font-size($font-size--lv1);
+  }
+  &.hero--lv2 {
+    @include font-size($font-size--lv3);
+  }
+  &.hero--lv3 {
+    @include font-size($font-size--lv5);
+  }
+  &.hero--lv4 {
+    @include font-size($font-size--lv7);
+  }
+  &.hero--lv5 {
+    @include font-size($font-size--lv9);
+  }
+  &.hero--lv6 {
+    @include font-size($font-size--lv11);
+  }
+  &.hero--lv7 {
+    @include font-size($font-size--lv13);
+  }
+  &.hero--lv8 {
+    @include font-size($font-size--lv15);
+  }
+  &.font-family--base--bold {
+    @extend %font-base-bold;
+  }
+  &.font-family--base--semi-bold {
+    @extend %font-base-semibold;
+  }
+  &.font-family--base--regular {
+    @extend %font-base-regular;
+  }
+  &.text-transform--uppercase {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+}
